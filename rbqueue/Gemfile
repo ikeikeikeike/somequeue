@@ -43,6 +43,14 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Use debugger
+  # Debugger: http://qiita.com/yusabana/items/8ce54577d959bb085b37
+  gem "pry"
+  gem "pry-doc"
+  gem "pry-rails"
+  # gem 'pry-byebug'
+  gem "pry-stack_explorer"
 end
 
 gem 'sidekiq'

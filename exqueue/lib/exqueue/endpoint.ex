@@ -33,7 +33,7 @@ defmodule Exqueue.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_exqueue_key",
-    signing_salt: "01qZNAzp"
+    signing_salt: "ykRllbrK"
 
   plug Exqueue.Router
 end

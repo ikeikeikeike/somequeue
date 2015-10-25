@@ -9,7 +9,7 @@ use Mix.Config
 config :exqueue, Exqueue.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
-  secret_key_base: "Vru62zCqsMUnC/dDFvzrAATHLVOOJuzzdvfNQc9iMuBGnANhhFYsC7Vy9Js62ja9",
+  secret_key_base: "J0CdIPTqYR451LhPTDMIM6d20DHrR2tFCz9W2ffvmnyyupglwhFUBFj8Lb0NYtjU",
   render_errors: [accepts: ~w(html json)],
   pubsub: [name: Exqueue.PubSub,
            adapter: Phoenix.PubSub.PG2]
@@ -27,3 +27,14 @@ import_config "#{Mix.env}.exs"
 config :phoenix, :generators,
   migration: true,
   binary_id: false
+
+config :exq,
+  host: "127.0.0.1",
+  port: 6379,
+  # password: "optional_redis_auth",
+  namespace: "",
+  concurrency: 0,  # concurrency: :infinite,
+  queues: ["default"]
+  poll_timeout: 50,
+  scheduler_enable: false,
+  scheduler_poll_timeout: 200
