@@ -33,8 +33,8 @@ config :exq,
   port: 6379,
   # password: "optional_redis_auth",
   namespace: "",
-  concurrency: 0,  # concurrency: :infinite,
-  queues: ["default"]
-  # poll_timeout: 50,
-  # scheduler_enable: false,
-  # scheduler_poll_timeout: 200
+  queues: ["default"],
+  concurrency: :infinite,  # concurrency: 0,  
+  poll_timeout: 50,
+  scheduler_enable: false,
+  scheduler_poll_timeout: 200
