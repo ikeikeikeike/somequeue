@@ -54,3 +54,4 @@ group :development do
 end
 
 gem 'sidekiq'
+gem 'awesome_print'

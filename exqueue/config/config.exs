@@ -35,6 +35,6 @@ config :exq,
   namespace: "",
   concurrency: 0,  # concurrency: :infinite,
   queues: ["default"]
-  poll_timeout: 50,
-  scheduler_enable: false,
-  scheduler_poll_timeout: 200
+  # poll_timeout: 50,
+  # scheduler_enable: false,
+  # scheduler_poll_timeout: 200
