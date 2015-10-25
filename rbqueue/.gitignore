@@ -26,3 +26,5 @@
 
 # Ignore the rbenv fix version file.
 /.ruby-version
+
+tags
