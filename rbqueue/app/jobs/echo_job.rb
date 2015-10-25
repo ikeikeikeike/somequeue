@@ -2,6 +2,6 @@ class EchoJob < ActiveJob::Base
   queue_as :default
 
   def perform(*args)
-    # Do something later
+    Rails.logger.debug(args)
   end
 end
