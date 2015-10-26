@@ -1,5 +1,5 @@
 defmodule EchoJob do
-  def perform(msg \\ "no args") do
-    IO.puts(msg)
+  def perform(msg) when is_map(msg) do
+    IO.inspect(msg)
   end
 end
