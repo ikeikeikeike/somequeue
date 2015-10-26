@@ -16,7 +16,7 @@ func (r *Hookable) Call(queue string, msg *workers.Msg, next func() bool) (ackno
 }
 
 func Echo(msg *workers.Msg) {
-	pp.Println("Echo", msg)
+	pp.Println("Echo", msg.OriginalJson())
 	// message.Jid()
 	// message.Args() is a wrapper around go-simplejson (http://godoc.org/github.com/bitly/go-simplejson)
 }

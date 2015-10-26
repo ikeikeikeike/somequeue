@@ -1,7 +1,9 @@
 #!/bin/bash
 
+trap "exit" INT
+
 for i in `seq 0 10000`; do
-    sleep 5 
+    sleep 3
 
     echo "mix run -e \"Exq.enqueue(:exq, 'default', 'ActiveJob::QueueAdapters::SidekiqAdapter::JobWrapper', [%{'arguments' => [%{'exqueue' => $i}], 'queue_name' => 'default', 'job_class' => 'EchoJob'}])\""
 
