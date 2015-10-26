@@ -2,13 +2,11 @@
 
 (cd goqueue
 
-go build
-
 for i in `seq 0 10000`; do
     sleep 5 
 
-    echo "./goqueue $i"
-    ./goqueue $i
+    echo "go run main.go jobs.go $i"
+    go run main.go jobs.go $i
 done
 
 )
