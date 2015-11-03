@@ -67,6 +67,16 @@ defmodule Exqueue.Web do
     end
   end
 
+  def worker do
+    quote do
+      alias Exqueue.Repo
+      import Ecto.Model
+      import Ecto.Query, only: [from: 1, from: 2]
+
+      import Exqueue.Router.Helpers
+    end
+  end
+
   @doc """
   When used, dispatch to the appropriate controller/view/etc.
   """

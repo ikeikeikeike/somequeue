@@ -40,3 +40,14 @@ config :exqueue, Exqueue.Repo,
   database: "exqueue_dev",
   hostname: "localhost",
   pool_size: 10
+
+config :exq,
+  host: "localhost",
+  port: 6379,
+  # password: "optional_redis_auth",
+  namespace: "",
+  concurrency: :infinite,
+  queues: ["default"],
+  poll_timeout: 50,
+  scheduler_enable: false,
+  scheduler_poll_timeout: 200
