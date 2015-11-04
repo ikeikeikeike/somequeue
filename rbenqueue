@@ -7,8 +7,7 @@ trap "exit" INT
 for i in `seq 0 10000`; do
     sleep 3
 
-    echo "EchoJob.perform_later({rbenqueue: \"$i\"}) | rbenv exec bundle exec spring rails c" 
-    echo "EchoJob.perform_later({rbenqueue: \"$i\"})" | rbenv exec bundle exec spring rails c 
+    echo "EchoJob.perform_later({rbenqueue: \"$i\"})" | rbenv exec bundle exec spring rails c > /dev/null
 done
 
 )
